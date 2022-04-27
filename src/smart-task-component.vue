@@ -1,5 +1,4 @@
 <template> 
-    <div class="col-md-12">
      <div class="fv-row mb-5">
        <template v-for="task in model.taskChecklist" :key="task.id">
             <div class="d-flex align-items-center mb-2 py-3 bg-white">
