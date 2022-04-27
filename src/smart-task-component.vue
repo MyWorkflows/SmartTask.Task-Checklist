@@ -1,21 +1,7 @@
-<template>
-  <form>
-    <div class="my-5">
-      <button
-        type="button"
-        @click="submitForm"
-        class="btn btn-sm btn-primary"
-      >
-       Mark as in Progress
-      </button>
-    </div>
-  </form>
-</template>
-
 <template> 
     <div class="col-md-12">
      <div class="fv-row mb-5">
-       <template v-for="task in model.taskChecklist">
+       <template v-for="task in model.taskChecklist" :key="task.id">
             <div class="d-flex align-items-center mb-2 py-3 bg-white">
 												<!--begin::Bullet-->
 												<span class="bullet bullet-vertical h-40px"></span>
@@ -26,10 +12,10 @@
 												</div>
 												<!--end::Checkbox-->
 												<!--begin::Description-->
-												<div class="flex-grow-1">
+											<div class="flex-grow-1">
 													<a href="#" class="text-gray-800 text-hover-primary fw-bolder fs-6">{{task.taskName}}</a>
 													<span class="text-muted fw-bold d-block" v-html="task.taskDescription"></span>
-												</div>
+											</div>
 						 </div>
         </template>
     </div>
